@@ -1,5 +1,280 @@
-.users {
+.users-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  place-items: center;
+}
+
+.users-form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid dodgerblue;
+}
+
+.users-form__title {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.users-form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.users-form__inputs input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+}
+
+.users-display {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  min-height: 1000px;
+  width: 900px;
+  overflow-x: auto;
+}
+
+.users-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.user-card {
+  width: 350px;
+  height: 300px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid dodgerblue;
+  padding: 15px;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #007bff;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
+}
+
+.user-avatar span {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.user-info h3 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.user-info p {
+  color: #666;
+  margin: 0;
+  font-size: 16px;
+}
+
+.users-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #999;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-remove {
+  background-color: #dc3545;
+  color: white;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+ /* media start */
+@media (max-width: 768px) {
+  .users-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    place-items: stretch;
+  }
+
+  .users-form {
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .users-form__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .users-display {
+    width: 100%;
+    min-height: 600px;
+    padding: 20px;
+  }
+
+  .users-list {
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .user-card {
+    width: 280px;
+    height: 260px;
+    padding: 12px;
+  }
+
+  .user-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user-avatar span {
+    font-size: 32px;
+  }
+
+  .user-info h3 {
+    font-size: 20px;
+  }
+
+  .user-info p {
+    font-size: 14px;
+  }
+
+  .btn-remove {
+    width: 180px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-container {
+    padding: 0 10px;
+  }
+
+  .users-grid {
+    gap: 20px;
+  }
+
+  .users-form {
+    padding: 20px;
+  }
+
+  .users-form__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .users-form__inputs {
+    gap: 12px;
+  }
+
+  .users-form__inputs input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .users-display {
+    padding: 15px;
+    min-height: 500px;
+  }
+
+  .users-list {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-card {
+    width: 100%;
+    max-width: 300px;
+    height: 240px;
+    padding: 10px;
+  }
+
+  .user-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .user-avatar span {
+    font-size: 28px;
+  }
+
+  .user-info h3 {
+    font-size: 18px;
+  }
+
+  .user-info p {
+    font-size: 13px;
+  }
+
+  .btn-remove {
+    width: 150px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .users-empty {
+    height: 200px;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+  }
 }
